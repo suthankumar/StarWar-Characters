@@ -16,7 +16,7 @@ function CharacterCard({
   favCharacters,
 }: PropType) {
   return (
-    <div className="flex hover:bg-indigo-100 bg-white border-t-2 border-indigo-600 p-5 mt-8 space-x-4 items-center shadow-xl max-w-sm w-60 p-4 rounded-lg">
+    <div className="flex hover:bg-indigo-100 bg-white border-t-2 border-indigo-600 p-5 mt-8 space-x-4 items-center shadow-xl max-w-sm w-60 mr-5 rounded-lg">
       <div className="w-full">
         <div className="flex justify-between">
           <div className="flex-start w-64">

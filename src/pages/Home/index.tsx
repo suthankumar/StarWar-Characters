@@ -68,7 +68,7 @@ function Home() {
           Clear
         </button>
       </div>
-      <div className="flex flex-wrap space-x-4 justify-center mx-4 h-screen/1 overflow-y-scroll">
+      <div className="flex flex-wrap justify-center mx-4 h-screen/1 overflow-y-scroll">
         {filteredData &&
           filteredData.map((d: any, idx: number) => {
             return (
