@@ -39,7 +39,7 @@ export const MainContextProvider = ({children}: MainProviderProps) => {
   //Fetch the data from url
   const getData=(url:string)=>{
     axios.get(url)
-    .then(res => {
+    .then((res:any) => {
       const {data} = res;console.log(data);
       setData(data);
     })
@@ -47,7 +47,7 @@ export const MainContextProvider = ({children}: MainProviderProps) => {
   
   const addCharacter=(character:any)=>{
     let newlist = [...favCharacters];
-      !favCharacters.some((g:any)=> g.url==character.url)
+      !favCharacters.some((g:any)=> g.url===character.url)
       ?newlist.push(character)
       :newlist = newlist.filter((g:any)=> g.url!==character.url)
     setfavCharacters(newlist)

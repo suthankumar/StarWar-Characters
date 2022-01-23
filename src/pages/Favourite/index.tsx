@@ -9,12 +9,12 @@ function Favourite() {
   const updateData = (e:any) => {
     let value = e.target.value, id =e.target.id;
     const name = e.target.name;
-    if (value == '') {alert("Can't be Empty");}
+    if (value === '') {alert("Can't be Empty");}
     //UpdateStock(e.target.id, name, value)
 
     let newlist = [...favCharacters];
-    let index = newlist.findIndex(g=> g.url==id)
-    if (index!=-1){
+    let index = newlist.findIndex(g=> g.url===id)
+    if (index!==-1){
         newlist[index][name] = value;
     }
     setfavCharacters(newlist)

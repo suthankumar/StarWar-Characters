@@ -12,7 +12,7 @@ function GetData({url, keyName} : PropType) {
         // const res = await axios.get('/posts');
         //     const posts = res.data;
         axios.get(url)
-            .then(res => {
+            .then((res:any) => {
             const {data} = res;
             setText(data[keyName]);
         })

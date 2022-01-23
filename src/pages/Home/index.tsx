@@ -1,7 +1,5 @@
-import React, {useContext, useState, useEffect} from 'react';
+import {useContext, useState, useEffect} from 'react';
 import {MainContext} from "../../context/MainContext";
-import {Link} from "react-router-dom";
-import ViewDetails from '../ViewDetails';
 import CharacterCard from '../../components/CharacterCard';
 
 function Home() {
