@@ -44,7 +44,6 @@ function ViewDetails() {
               <Info title={"Eye colour"} text={details.eye_color}/>
               <Info title={"Hair colour"}  text={details.hair_color}/>
               <Info title={"Gender colour"}  text={details.gender}/>
-              <Info title={"Homeworld"}  text={details.homeworld}/>
             <div className="mt-3 font-bold w-32 "> Film </div>
             <div className="pt-4 flex justify-start ">
               {details.films.length ? details.films.map((film:any, i:number)=>{

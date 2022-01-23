@@ -11,8 +11,6 @@ interface starwar {
     results: any,
     previous: string|null,
   }
-
-
 interface conextValueType {
     data: starwar|null,
     currentPage: number,
@@ -45,6 +43,7 @@ export const MainContextProvider = ({children}: MainProviderProps) => {
     })
   }
   
+  //Modify favourite list
   const addCharacter=(character:any)=>{
     let newlist = [...favCharacters];
       !favCharacters.some((g:any)=> g.url===character.url)
