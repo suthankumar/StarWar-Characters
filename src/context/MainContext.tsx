@@ -1,6 +1,6 @@
 import React, { useState, createContext, SetStateAction, useEffect } from 'react'
 import axios from 'axios';
-// type MainContextProps = [Object, React.Dispatch<SetStateAction<Object>>]
+
 type MainProviderProps = {
    children: React.ReactNode
 }
@@ -28,9 +28,9 @@ export const MainContextProvider = ({children}: MainProviderProps) => {
     const [data, setData] = useState<starwar|null>(null);
     const [currentPage, setCurtPage] = useState<number|1>(1);
     const [favCharacters, setfavCharacters] = useState<any>([]);
-      
+     
+  //Run everytime the user change page 
   useEffect(() => {
-    // Update the document title using the browser API
     getData('https://swapi.dev/api/people/?page='+currentPage)
   },[currentPage]);
 
@@ -38,7 +38,7 @@ export const MainContextProvider = ({children}: MainProviderProps) => {
   const getData=(url:string)=>{
     axios.get(url)
     .then((res:any) => {
-      const {data} = res;console.log(data);
+      const {data} = res;//console.log(data);
       setData(data);
     })
   }

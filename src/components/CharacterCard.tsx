@@ -12,7 +12,6 @@ interface PropType {
 function CharacterCard({addCharacter, d, updateData, homepage, favCharacters} : PropType) {
   return (
     <div className="flex hover:bg-indigo-100 bg-white border-t-2 border-indigo-600 p-5 mt-8 space-x-4 items-center shadow-xl max-w-sm w-60 p-4 rounded-lg">
-                {/* <img src="https://avatars.githubusercontent.com/u/5550850?v=4" alt="image" className="h-14 w-14 rounded-full" /> */}
                 <div className="w-full">
                     <div className="flex justify-between">
                             <div className="flex-start w-64">
@@ -41,10 +40,6 @@ function CharacterCard({addCharacter, d, updateData, homepage, favCharacters} : 
                     </svg>
                     </button>
                   </div></Link>
-
-                   {/* <div className="pt-4 flex justify-start ">
-                      <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm text-gray-700 mr-2">#fab</span>
-                  </div> */}
                 </div>
     </div>
   );

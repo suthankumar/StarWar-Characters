@@ -9,8 +9,7 @@ function Home() {
 
   //Changing page Handler
   const changePage=(next?:Boolean)=>{
-    let page = currentPage //= next ? currentPage+1 : currentPage-1;
-
+    let page = currentPage 
     if(next && currentPage < 9){
       page = currentPage+1
     }
@@ -51,7 +50,6 @@ function Home() {
       <div className="flex items-center max-w-xl mx-auto">
         <input type="text" placeholder="Search here" className="w-full text-lg px-4 py-4 rounded-md rounded-r-none outline-none" name="search" value = {searchVal} onChange={setValue} />
         <div className="flex space-x-1">
-          {/* <button className="bg-indigo-500 hover:bg-indigo-600 transition duration-100 text-xl py-4 px-8 rounded-md rounded-l-none text-white font-semibold">Go</button> */}
         </div>
         <button className="text-xl py-4 px-6 ml-4 rounded-md font-semibold hover:bg-indigo-600 transition duration-100 text-white bg-indigo-500" onClick={()=>setSearchVal("")}>Clear</button>
       </div>

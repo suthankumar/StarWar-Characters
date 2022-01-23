@@ -18,21 +18,11 @@ function Favourite() {
         newlist[index][name] = value;
     }
     setfavCharacters(newlist)
-    // setfavCharacters([
-    //    favCharacters.map((y:any) =>
-    //     y.url === id ? { ...y, [key]: val } : y
-    //   ),
-    // ]);
-    // setfavCharacters((prevState: { arrayvar: any; }) => ({
-    //     arrayvar: [...prevState.arrayvar, prevState.arrayvar.map((y:any) =>
-    //         y.url === id ? { ...y, [key]: val } : y
-    //       )]
-    //   }))
   };
 
   return (
   <div>
-    {/* <!-- Main Component --> */}
+    {/*  Main Component */}
     <main className="mt-16 h-screen/2 overflow-y-scroll p-6">
       <div className="flex flex-wrap space-x-4 justify-center mx-4 ">
         {favCharacters.length ? favCharacters.map((d:any, idx:number)=>{

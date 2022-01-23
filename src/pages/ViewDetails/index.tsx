@@ -1,4 +1,4 @@
-/** Import all the nesscarry Libraries  */
+/** Import all the necessary Libraries  */
 import {useContext} from 'react';
 import {MainContext} from "../../context/MainContext";
 import {Link, useLocation} from 'react-router-dom';
