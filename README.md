@@ -1,5 +1,4 @@
 # Starwar Characters Application
-====================================
 ![alt text](https://raw.githubusercontent.com/suthankumar/StarWar-Characters/main/homepage.png)
 ![alt text](https://raw.githubusercontent.com/suthankumar/StarWar-Characters/main/details.png)
 ![alt text](https://raw.githubusercontent.com/suthankumar/StarWar-Characters/main/favourite.png)
