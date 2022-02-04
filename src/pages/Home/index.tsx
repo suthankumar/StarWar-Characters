@@ -51,9 +51,6 @@ function Home() {
   return (
     <main className="mt-16 h-screen/2">
       {/*Search component */}
-      {/* <h1 className="text-3xl mx-auto text-white">
-          Home
-      </h1> */}
       <div className="flex items-center max-w-xl mx-auto">
         <input
           type="text"
@@ -72,7 +69,6 @@ function Home() {
           Clear
         </button>
       </div>
-      {filteredData && <div>Shows Result</div>}
       <div className="flex flex-wrap justify-center mx-4 h-screen/1 overflow-y-scroll">
         {filteredData &&
           filteredData.map((d: any, idx: number) => {

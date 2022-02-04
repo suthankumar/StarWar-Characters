@@ -12,11 +12,10 @@ function GetData({ url, keyName }: PropType) {
   //Run onces to get the specific data
   useEffect(() => {
     const fetchData = async () => {
-       const { data } =await axios.get(url);
+      const { data } = await axios.get(url);
       setText(data[keyName]);
     };
-    fetchData()
-    
+    fetchData();
   }, []);
 
   return <div> {text} </div>;
