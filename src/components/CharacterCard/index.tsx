@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import GetData from "./GetData";
+import GetData from "../GetData";
 interface PropType {
   addCharacter: (characher: any) => void;
   updateData?: (e: any) => void;
@@ -16,7 +16,7 @@ function CharacterCard({
   favCharacters,
 }: PropType) {
   return (
-    <div className="flex hover:bg-indigo-100 bg-white border-t-2 border-indigo-600 p-5 mt-8 space-x-4 items-center shadow-xl max-w-sm w-60 mr-5 rounded-lg">
+    <div data-testid="SwCharacter" className="flex hover:bg-indigo-100 bg-white border-t-2 border-indigo-600 p-5 mt-8 space-x-4 items-center shadow-xl max-w-sm w-60 mr-5 rounded-lg">
       <div className="w-full">
         <div className="flex justify-between">
           <div className="flex-start w-64">
@@ -42,7 +42,8 @@ function CharacterCard({
                 onClick={() => {
                   addCharacter(d);
                 }}
-                className="h-6 w-6 text-red-400 hover:scale-125 cursor-pointer"
+                data-testid ="binIcon"
+                className="h-6 w-6 bin text-red-400 hover:scale-125 cursor-pointer"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -60,7 +61,8 @@ function CharacterCard({
                 onClick={() => {
                   addCharacter(d);
                 }}
-                className="h-6 w-6 text-red-400 hover:scale-125 cursor-pointer"
+                data-testid ="heartIcon"
+                className="h-6 w-6 heart text-red-400 hover:scale-125 cursor-pointer"
                 fill={`${
                   favCharacters.some((g: any) => g.url === d.url)
                     ? "currentColor"

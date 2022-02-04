@@ -3,8 +3,7 @@ import { MainContext } from "../../context/MainContext";
 import CharacterCard from "../../components/CharacterCard";
 
 function Favourite() {
-  const { addCharacter, favCharacters, setfavCharacters } =
-    useContext(MainContext);
+  const { addCharacter, favCharacters, setfavCharacters } = useContext(MainContext);
 
   //Update the specific data
   const updateData = (e: any) => {

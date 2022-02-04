@@ -41,7 +41,7 @@ export const MainContextProvider = ({ children }: MainProviderProps) => {
   //Fetch the data from url
   const getData = (url: string) => {
     axios.get(url).then((res: any) => {
-      const { data } = res; //console.log(data);
+      const { data } = res; console.log(data);
       setData(data);
     });
   };
