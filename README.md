@@ -29,7 +29,8 @@ The features that I have Implemented:
 - Ability to modify the height of the StarWar character on My Favourite page
 
 ## Additional task
-- Added some couple of test to components.
+- Added some couple of tests to the components.
+- Even more cleaning of the code by reducing the line of code as possible by creating seperate components.
 
 ## Feature Improvements
 If I had more time:

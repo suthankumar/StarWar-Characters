@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import GetData from "../GetData";
+import HeartIcon from "../HeartIcon";
 interface PropType {
   addCharacter: (characher: any) => void;
   updateData?: (e: any) => void;
@@ -16,7 +17,10 @@ function CharacterCard({
   favCharacters,
 }: PropType) {
   return (
-    <div data-testid="SwCharacter" className="flex hover:bg-indigo-100 bg-white border-t-2 border-indigo-600 p-5 mt-8 space-x-4 items-center shadow-xl max-w-sm w-60 mr-5 rounded-lg">
+    <div
+      data-testid="SwCharacter"
+      className="flex hover:bg-indigo-100 bg-white border-t-2 border-indigo-600 p-5 mt-8 space-x-4 items-center shadow-xl max-w-sm w-60 mr-5 rounded-lg"
+    >
       <div className="w-full">
         <div className="flex justify-between">
           <div className="flex-start w-64">
@@ -42,7 +46,7 @@ function CharacterCard({
                 onClick={() => {
                   addCharacter(d);
                 }}
-                data-testid ="binIcon"
+                data-testid="binIcon"
                 className="h-6 w-6 bin text-red-400 hover:scale-125 cursor-pointer"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -56,28 +60,11 @@ function CharacterCard({
                 />
               </svg>
             ) : (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                onClick={() => {
-                  addCharacter(d);
-                }}
-                data-testid ="heartIcon"
-                className="h-6 w-6 heart text-red-400 hover:scale-125 cursor-pointer"
-                fill={`${
-                  favCharacters.some((g: any) => g.url === d.url)
-                    ? "currentColor"
-                    : "none"
-                }`}
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                />
-              </svg>
+              <HeartIcon
+                addCharacter={addCharacter}
+                favCharacters={favCharacters}
+                item={d}
+              />
             )}
           </div>
         </div>
