@@ -11,11 +11,18 @@ function GetData({ url, keyName }: PropType) {
 
   //Run onces to get the specific data
   useEffect(() => {
+    let isMounted = true;
     const fetchData = async () => {
       const { data } = await axios.get(url);
-      setText(data[keyName]);
+      if (isMounted) {
+        setText(data[keyName]);
+      }
     };
     fetchData();
+
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
   return <div> {text} </div>;

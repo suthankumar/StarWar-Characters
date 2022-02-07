@@ -1,10 +1,11 @@
 /** Import all the necessary Libraries  */
 import { useContext } from "react";
 import { MainContext } from "../../context/MainContext";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import Info from "../../components/Info";
 import BackButton from "../../components/BackButton";
 import InfoBubble from "../../components/InfoBubble";
+import HeartIcon from "../../components/HeartIcon";
 
 /** Interface  */
 interface stateType {
@@ -28,29 +29,13 @@ function ViewDetails() {
               </h1>
             </div>
             <div className="flex-end flex flex-row w-44 px-2 items-center">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                onClick={() => {
-                  addCharacter(details);
-                }}
-                className="h-6 w-6 text-red-400 cursor-pointer"
-                fill={`${
-                  favCharacters.some((g: any) => g.url == details.url)
-                    ? "currentColor"
-                    : "none"
-                }`}
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                />
-              </svg>
+            <HeartIcon
+                addCharacter={addCharacter}
+                favCharacters={favCharacters}
+                item={details}
+              />
               <div className="text-gray-500">{`${
-                favCharacters.some((g: any) => g.url == details.url)
+                favCharacters.some((g: any) => g.url === details.url)
                   ? "Added to Favouite"
                   : "Add to Favouite"
               }`}</div>

@@ -1,4 +1,3 @@
-import GetData from "../GetData";
 interface PropType {
   addCharacter: (character: any) => void;
   favCharacters: any;
@@ -15,7 +14,7 @@ function HeartIcon({ addCharacter, favCharacters, item }: PropType) {
       data-testid="heartIcon"
       className="h-6 w-6 text-red-400 cursor-pointer"
       fill={`${
-        favCharacters.some((g: any) => g.url == item.url)
+        favCharacters.some((g: any) => g.url === item.url)
           ? "currentColor"
           : "none"
       }`}

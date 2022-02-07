@@ -21,7 +21,7 @@ const renderComponent = (homepg: boolean = true, favCharacters: any = []) => {
   );
 };
 
-test("Should render CharcterCard with same props passed", async () => {
+test("Should render CharacterCard with same props passed", async () => {
   renderComponent();
   const titleElement = screen.getByText(/Luke Skywalker/i);
   expect(titleElement).toBeInTheDocument();
