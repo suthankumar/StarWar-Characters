@@ -62,7 +62,7 @@ describe("Search for StarWar character", () => {
     expect(inputElement).toBeInTheDocument();
   });
 
-  test("Should be able type in input and expect specfic star character on the page", async () => {
+  test("Should be able to type in input and expect specfic star character on the page", async () => {
     const { findAllByTestId, getByPlaceholderText, findByText } = renderComp();
     let itemElement = await findAllByTestId(/SwCharacter/); //10 items here intialy
 

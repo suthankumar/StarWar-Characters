@@ -23,7 +23,7 @@ function GetData({ url, keyName }: PropType) {
     return () => {
       isMounted = false;
     };
-  }, []);
+  }, [url]);
 
   return <div> {text} </div>;
 }

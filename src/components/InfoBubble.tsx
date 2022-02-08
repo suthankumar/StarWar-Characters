@@ -15,7 +15,7 @@ function InfoBubble({ details, Title, keyName = "name" }: PropType) {
             return (
               <span
                 key={i}
-                className="inline-block bg-gray-50 rounded-full px-3 py-1 text-sm text-gray-700 mr-2"
+                className="mt-2 inline-block bg-gray-50 rounded-full px-3 py-1 text-sm text-gray-700 mr-2"
               >
                 <GetData keyName={keyName} url={starSp} />
               </span>

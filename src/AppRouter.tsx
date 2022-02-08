@@ -7,7 +7,7 @@ import Footer from "./components/Footer";
 
 export default function AppRouter() {
   return (
-    <div className="bg-gray-700">
+    <div className="bg-gray-700 h-screen">
       <Router>
         <Header />
         <Routes>

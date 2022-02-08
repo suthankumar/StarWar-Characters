@@ -18,7 +18,7 @@ function ViewDetails() {
   const { details } = location.state as stateType;
 
   return (
-    <main className="flex flex-col align-middle h-screen/3 bg-indigo-100">
+    <main className="flex flex-col align-middle h-90 bg-indigo-100">
       <BackButton/>
       <div className="mx-6 mb-3 h-full grid grid-cols-3 gap-4 items-start bg-indigo-200">
         <div className="flex flex-col p-6 w-full justify-start col-start-1 col-end-7">

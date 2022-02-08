@@ -23,9 +23,7 @@ function Favourite() {
   };
 
   return (
-    <div>
-      {/*  Main Component */}
-      <main className="h-screen/2 overflow-y-scroll p-6">
+      <main className="h-4/5 overflow-y-scroll p-6">
         <h1 className="p-5 text-lg text-white font-semibold">My Favourite</h1>
         <div className="flex flex-wrap  justify-start mx-5 ">
           {favCharacters.length ? (
@@ -46,7 +44,6 @@ function Favourite() {
           )}
         </div>
       </main>
-    </div>
   );
 }
 

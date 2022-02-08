@@ -17,7 +17,7 @@ function SearchBox({ filteredData, setfilteredData, data }: PropType) {
   //Filter the result based on the user selection
   const filterResult = () => {
     let newList = data?.results;
-    if (searchVal != "") {
+    if (searchVal !== "") {
       newList =
         filteredData &&
         filteredData.filter(
@@ -33,7 +33,7 @@ function SearchBox({ filteredData, setfilteredData, data }: PropType) {
   }, [searchVal]);
 
   return (
-    <div className="flex items-center max-w-xl mx-auto">
+    <div className="flex items-center max-w-xl w-96 mx-auto">
       <input
         type="text"
         placeholder="Search here"

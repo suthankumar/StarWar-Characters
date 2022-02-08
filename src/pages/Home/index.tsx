@@ -26,10 +26,11 @@ function Home() {
   }, [data]);
 
   return (
-    <main className="mt-16 h-screen/2">
+    <main className="mt-9 h-4/5">
       {/*Search component */}
       <SearchBox filteredData={filteredData} data={data} setfilteredData={setfilteredData}/>
-      <div className="flex flex-wrap justify-center mx-4 h-screen/1 overflow-y-scroll">
+      <div className="h-3/4 overflow-y-scroll">
+        <div className="flex flex-wrap justify-center mx-4">
         {filteredData &&
           filteredData.map((d: any, idx: number) => {
             return (
@@ -42,6 +43,7 @@ function Home() {
               />
             );
           })}
+        </div>
       </div>
       <Pagination  changePage={changePage} currentPage={currentPage}/>
     </main>

@@ -21,7 +21,8 @@ const renderComponent = (homepg: boolean = true, favCharacters: any = []) => {
   );
 };
 
-test("Should render CharacterCard with same props passed", async () => {
+
+test("Should render the CharacterCard with same props that been passed", async () => {
   renderComponent();
   const titleElement = screen.getByText(/Luke Skywalker/i);
   expect(titleElement).toBeInTheDocument();
@@ -48,14 +49,14 @@ describe("Must Show the correct icon for each different page", () => {
 });
 
 describe("StarWar character Favourite Status", () => {
-  test("Should not highlight the item if selected StarWar character not in the favourite list", async () => {
+  test("Should not highlight the item if the selected StarWar character not in the favourite list", async () => {
     renderComponent();
     const iconElement = screen.queryByTestId(/heartIcon/);
     //expect icon to be just outline as the current item not in the favourite list
     expect(iconElement).toHaveAttribute("fill", "none");
   });
 
-  test("Should highlight if selected StarWar character in the favourite list", async () => {
+  test("Should highlight if the selected StarWar character in the favourite list", async () => {
     renderComponent(true, [oneStarWarCharacter]);
     const iconElement = screen.queryByTestId(/heartIcon/);
     //expect icon to be filled as the current item is in the favourite list
